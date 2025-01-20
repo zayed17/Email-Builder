@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Template</title>
+    <style>
+
+        body, table, td, a {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        img {
+            border: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .email-container {
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 20px 0;
+        }
+        .email-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .email-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .email-header h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .email-header p {
+            color: #777777;
+            font-size: 14px;
+        }
+
+        .email-body {
+            padding: 20px 0;
+            color: #555555;
+        }
+        .email-body p {
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        /* Footer styles */
+        .email-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #dddddd;
+            font-size: 14px;
+            color: #999999;
+        }
+        .email-footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-content">
+
+            <div class="email-header">
+                <h1>{{title}}</h1>
+                <p>Your personalized message</p>
+            </div>
+
+
+            <div class="email-body">
+                <p>{{content}}</p>
+                <img src="{{imageUrl}}" alt="Email Banner">
+                <p>If you have any questions, feel free to contact us.</p>
+                <a href="https://example.com" class="cta-button">Visit Our Website</a>
+            </div>
+
+
+            <div class="email-footer">
+                <p>Thank you for choosing us.</p>
+                <p><a href="#">Unsubscribe</a> | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

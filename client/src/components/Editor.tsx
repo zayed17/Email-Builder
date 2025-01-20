@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Card, Input } from 'antd';
+import { useGetEmailLayoutQuery } from '../store/api/emailApi';
 
 const { TextArea } = Input;
 
 const Editor: React.FC = () => {
-  const [content, setContent] = useState<string>("<p>Welcome to the Email Builder!</p>");
+  const { data, error, isLoading } = useGetEmailLayoutQuery(''); 
+  console.log(data,"data is checking")
+  const [content, setContent] = useState<string>(data || ''); // Initialize state with fetched data or an empty string
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setContent(e.target.value);
